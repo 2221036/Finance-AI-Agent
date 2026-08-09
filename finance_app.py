@@ -13,7 +13,7 @@ st.set_page_config(page_title="Finance AI Agent")
 
 st.title("💰 Finance AI Agent")
 
-df = load_csv("data/sample_expenses.csv")
+df = load_csv("sample_expenses.csv")
 
 st.subheader("Dataset")
 st.dataframe(df)
