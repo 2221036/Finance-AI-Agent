@@ -41,8 +41,9 @@ def categorize_transactions(df):
         "Salary": "Income"
     }
 
-    df["Category"] = df["Description"].map(categories)
-    df["Category"] = df["Category"].fillna("Others")
+df.columns = df.columns.str.strip()
+df["Description"] = df["Description"].astype(str).str.strip()
+df["Category"] = df["Description"].map(categories).fillna("Others")
 
     return df
 
